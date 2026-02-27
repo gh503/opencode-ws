@@ -1,0 +1,109 @@
+{
+  "total_errors": 10,
+  "unique_categories": 5,
+  "unique_error_codes": 5,
+  "clusters": [
+    {
+      "category": "validation",
+      "error_code": "PY-VAL-001",
+      "count": 5,
+      "sample_messages": [
+        "Invalid email format"
+      ],
+      "root_causes": {
+        "User provided malformed email address": 5
+      },
+      "severities": {
+        "medium": 5
+      },
+      "fix_suggestions": {
+        "Validate email format using regex or email library": 5
+      }
+    },
+    {
+      "category": "authentication",
+      "error_code": "PY-AUTH-001",
+      "count": 2,
+      "sample_messages": [
+        "Authentication failed"
+      ],
+      "root_causes": {
+        "Invalid credentials provided": 2
+      },
+      "severities": {
+        "high": 2
+      },
+      "fix_suggestions": {
+        "Implement account lockout after 5 failed attempts": 2
+      }
+    },
+    {
+      "category": "not_found",
+      "error_code": "PY-NOTF-001",
+      "count": 1,
+      "sample_messages": [
+        "User not found"
+      ],
+      "root_causes": {
+        "Database query returned empty result": 1
+      },
+      "severities": {
+        "medium": 1
+      },
+      "fix_suggestions": {
+        "Add index on user lookup fields": 1
+      }
+    },
+    {
+      "category": "dependency",
+      "error_code": "PY-DEP-001",
+      "count": 1,
+      "sample_messages": [
+        "Database connection failed"
+      ],
+      "root_causes": {
+        "Database server timeout": 1
+      },
+      "severities": {
+        "high": 1
+      },
+      "fix_suggestions": {
+        "Implement circuit breaker pattern": 1
+      }
+    },
+    {
+      "category": "internal",
+      "error_code": "PY-INT-001",
+      "count": 1,
+      "sample_messages": [
+        "Internal server error"
+      ],
+      "root_causes": {
+        "NullPointerException in user service": 1
+      },
+      "severities": {
+        "critical": 1
+      },
+      "fix_suggestions": {
+        "Add null check before accessing user object": 1
+      }
+    }
+  ],
+  "candidate_rules": [
+    {
+      "rule_name": "validation_PY-VAL-001",
+      "trigger_condition": {
+        "category": "validation",
+        "error_code": "PY-VAL-001"
+      },
+      "occurrences": 5,
+      "root_cause": "User provided malformed email address",
+      "severity": "medium",
+      "suggested_fix": "Validate email format using regex or email library",
+      "sample_messages": [
+        "Invalid email format"
+      ]
+    }
+  ],
+  "timestamp": "2026-02-27T18:16:44.211750"
+}

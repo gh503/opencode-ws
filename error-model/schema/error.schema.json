@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UnifiedError",
+  "type": "object",
+  "required": ["error_code", "category", "severity", "message", "timestamp"],
+  "properties": {
+    "error_code": {
+      "type": "string",
+      "pattern": "^[A-Z]{2,3}-[A-Z_]+-\\d{3}$",
+      "examples": ["PY-NULL-001", "GO-NIL-002", "TS-TYPE-003"],
+      "description": "Language prefix + Category + Sequential number"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "validation",
+        "authentication",
+        "authorization",
+        "not_found",
+        "conflict",
+        "rate_limit",
+        "dependency",
+        "internal"
+      ]
+    },
+    "layer": {
+      "type": "string",
+      "enum": ["presentation", "service", "data", "infrastructure"],
+      "default": "service"
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["critical", "high", "medium", "low", "info"]
+    },
+    "message": {
+      "type": "string",
+      "description": "User-safe message for external exposure"
+    },
+    "root_cause": {
+      "type": "string",
+      "description": "Internal technical root cause (not exposed externally)"
+    },
+    "stack_context": {
+      "type": "string",
+      "description": "Stack trace or context information"
+    },
+    "fix": {
+      "type": "string",
+      "description": "Suggested fix or remediation"
+    },
+    "correlation_id": {
+      "type": "string",
+      "description": "Request correlation ID for tracing"
+    },
+    "details": {
+      "type": "object",
+      "description": "Additional structured metadata"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 timestamp"
+    }
+  }
+}

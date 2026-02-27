@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "opencode-rule-evolution"
+version = "1.0.0"
+description = "AE-OS Rule Evolution Pipeline - AI Engineering Governance System"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+opencode-evolve = "rule_evolution.cli:main"

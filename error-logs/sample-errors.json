@@ -1,0 +1,102 @@
+[
+  {
+    "error_code": "PY-VAL-001",
+    "category": "validation",
+    "severity": "medium",
+    "message": "Invalid email format",
+    "root_cause": "User provided malformed email address",
+    "fix": "Validate email format using regex or email library",
+    "timestamp": "2026-02-27T10:00:00Z",
+    "correlation_id": "corr-001"
+  },
+  {
+    "error_code": "PY-VAL-001",
+    "category": "validation",
+    "severity": "medium",
+    "message": "Invalid email format",
+    "root_cause": "User provided malformed email address",
+    "fix": "Validate email format using regex or email library",
+    "timestamp": "2026-02-27T10:05:00Z",
+    "correlation_id": "corr-002"
+  },
+  {
+    "error_code": "PY-VAL-001",
+    "category": "validation",
+    "severity": "medium",
+    "message": "Invalid email format",
+    "root_cause": "User provided malformed email address",
+    "fix": "Validate email format using regex or email library",
+    "timestamp": "2026-02-27T10:10:00Z",
+    "correlation_id": "corr-003"
+  },
+  {
+    "error_code": "PY-VAL-001",
+    "category": "validation",
+    "severity": "medium",
+    "message": "Invalid email format",
+    "root_cause": "User provided malformed email address",
+    "fix": "Validate email format using regex or email library",
+    "timestamp": "2026-02-27T10:15:00Z",
+    "correlation_id": "corr-004"
+  },
+  {
+    "error_code": "PY-VAL-001",
+    "category": "validation",
+    "severity": "medium",
+    "message": "Invalid email format",
+    "root_cause": "User provided malformed email address",
+    "fix": "Validate email format using regex or email library",
+    "timestamp": "2026-02-27T10:20:00Z",
+    "correlation_id": "corr-005"
+  },
+  {
+    "error_code": "PY-AUTH-001",
+    "category": "authentication",
+    "severity": "high",
+    "message": "Authentication failed",
+    "root_cause": "Invalid credentials provided",
+    "fix": "Implement account lockout after 5 failed attempts",
+    "timestamp": "2026-02-27T11:00:00Z",
+    "correlation_id": "corr-006"
+  },
+  {
+    "error_code": "PY-AUTH-001",
+    "category": "authentication",
+    "severity": "high",
+    "message": "Authentication failed",
+    "root_cause": "Invalid credentials provided",
+    "fix": "Implement account lockout after 5 failed attempts",
+    "timestamp": "2026-02-27T11:05:00Z",
+    "correlation_id": "corr-007"
+  },
+  {
+    "error_code": "PY-NOTF-001",
+    "category": "not_found",
+    "severity": "medium",
+    "message": "User not found",
+    "root_cause": "Database query returned empty result",
+    "fix": "Add index on user lookup fields",
+    "timestamp": "2026-02-27T12:00:00Z",
+    "correlation_id": "corr-008"
+  },
+  {
+    "error_code": "PY-DEP-001",
+    "category": "dependency",
+    "severity": "high",
+    "message": "Database connection failed",
+    "root_cause": "Database server timeout",
+    "fix": "Implement circuit breaker pattern",
+    "timestamp": "2026-02-27T13:00:00Z",
+    "correlation_id": "corr-009"
+  },
+  {
+    "error_code": "PY-INT-001",
+    "category": "internal",
+    "severity": "critical",
+    "message": "Internal server error",
+    "root_cause": "NullPointerException in user service",
+    "fix": "Add null check before accessing user object",
+    "timestamp": "2026-02-27T14:00:00Z",
+    "correlation_id": "corr-010"
+  }
+]
